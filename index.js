@@ -33,7 +33,11 @@ const readme = (
     ${use}
 ## Credits:
     ${credits}
+##Questions?
+    Please feel free to contact me at:  https://github.com/${gitHub}/ or ${email}
+
 ---`;
+
 //initiates the inquirer prompt for user input
 inquirer
   .prompt([
@@ -90,6 +94,18 @@ inquirer
       name: "credits",
       type: "input",
       message: "What sources/ collaborators need to be accredited?",
+    },
+    {
+      // Questions section Github:
+      name: "github",
+      type: "input",
+      message: "Please enter your github username:",
+    },
+    {
+      // Questions section email:
+      name: "email",
+      type: "input",
+      message: "Please enter your email:",
     },
   ])
   //then uses the input to create the generated README from listed string literals and keys from user input

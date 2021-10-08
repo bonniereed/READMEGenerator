@@ -1,0 +1,23 @@
+{
+  "name": "READMEGenerator",
+  "version": "1.0.0",
+  "description": "This project is a node project that prompts user for input to create a README.md .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bonniereed/READMEGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bonniereed/READMEGenerator/issues"
+  },
+  "homepage": "https://github.com/bonniereed/READMEGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}

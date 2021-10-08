@@ -1,5 +1,8 @@
+//utilizes the inquirer module
 const inquirer = require("inquirer");
+//utilizes the filesystem to create the README.md
 const fs = require("fs");
+//readme const to create parameters within the generated doc
 const readme = (
   projectTitle,
   description,
@@ -31,7 +34,7 @@ const readme = (
 ## Credits:
     ${credits}
 ---`;
-
+//initiates the inquirer prompt for user input
 inquirer
   .prompt([
     {
@@ -89,6 +92,7 @@ inquirer
       message: "What sources/ collaborators need to be accredited?",
     },
   ])
+  //then uses the input to create the generated README from listed string literals and keys from user input
   .then((answers) => {
     const generatedReadme = readme(
       answers.name,
@@ -97,5 +101,6 @@ inquirer
       answers.linkedIn,
       answers.gitHub
     );
+    //writes file to file system, if there is an error there will be an error message in the console log
     fs.writeFile("readme.md", generatedReadme, (err) => console.log(err));
   });

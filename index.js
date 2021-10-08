@@ -10,14 +10,11 @@ const readme = (
   install,
   use,
   credits
-) => `# Mini-Project
-
-In this activity, you will build a command-line tool that generates an HTML portfolio page from user input.
+) => `README
 
 ## ${projectTitle}
 
 ## Description:
-    //Description of 
     ${description}
 ## What the application does: 
     ${functionality}
@@ -44,37 +41,61 @@ inquirer
       message: "Please enter your project's title:",
     },
     {
-      // location
-      name: "location",
+      // description
+      name: "description",
       type: "input",
-      message: "what's your location",
+      message: "Please enter a description of your project",
     },
     {
-      // bio
-      name: "bio",
+      // What the application does
+      name: "functionality",
       type: "input",
-      message: "what's your bio",
+      message: "What does your application do?",
     },
     {
-      // LinkedIn
-      name: "linkedIn",
+      // List the technologies used for the project
+      name: "techUsed",
       type: "input",
-      message: "what's your linkedIn",
+      message: "What technologies did you utilize for your project?",
     },
     {
-      // GitHub
-      name: "gitHub",
+      // Challenges faced while creating project
+      name: "challenges",
       type: "input",
-      message: "what's your gitHub",
+      message: "When working on your project, what challenges did you face?",
+    },
+    {
+      // Plans for future updates
+      name: "updates",
+      type: "input",
+      message: "What updates are you planning to implement?",
+    },
+    {
+      // How to install the project
+      name: "install",
+      type: "input",
+      message: "How does one install your application?",
+    },
+    {
+      // How to use the tool created
+      name: "use",
+      type: "input",
+      message: "Please explain how an end user would utilize your tool: ",
+    },
+    {
+      // Credits are due to the following apps/ collaborators:
+      name: "credits",
+      type: "input",
+      message: "What sources/ collaborators need to be accredited?",
     },
   ])
   .then((answers) => {
-    const generatedHTML = html(
+    const generatedReadme = readme(
       answers.name,
       answers.location,
       answers.bio,
       answers.linkedIn,
       answers.gitHub
     );
-    fs.writeFile("index.html", generatedHTML, (err) => console.log(err));
+    fs.writeFile("readme.md", generatedReadme, (err) => console.log(err));
   });

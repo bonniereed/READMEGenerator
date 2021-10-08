@@ -2,6 +2,12 @@ README
 
 ## README Generator
 
+
+https://user-images.githubusercontent.com/46511972/136632914-63d65651-17fb-4b5e-9d51-7a6f4f34ef2c.mp4
+
+
+
+
 ## Description:
 
     This project will prompt a user with question prompts to create a README based on their input.

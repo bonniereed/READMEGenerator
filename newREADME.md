@@ -1,24 +1,24 @@
 README
 
-## Tesla
+## README Generator
 
 ## Description:
-    Making spendy electric cars 
+    This project will prompt a user with question prompts to create a README based on their input.
 ## What the application does: 
-    Saves the environment
+    It generates README files for projects.
 ## Technologies Used: 
-    Electricity
+    Node.JS
 ## Challenges Faced:
-    Not poverty
+    Mostly issues with typos
 ## Future Updates:
-    Space travel
+    N/A
 ## How to install:
-    $$$$$$$
+    `npm install -y` then open the file in terminal and type `node index.js`
 ## How to use:
-    touching the wheel occasionally while the vehicle navigates traffic
+    Users can generate READMEs in less time with the user prompts from my tool.
 ## Credits:
-    Elon Musk
+    Bonnie Reed and Inquirer from node_modules.
 ##Questions?
-    Please feel free to contact me at:  https://github.com/muskySkunk/ or elon.musk@tesla.com
+    Please feel free to contact me at:  https://github.com/bonniereed/ or bonniejeanreed@gmail.com
 
 ---

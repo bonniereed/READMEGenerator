@@ -12,7 +12,9 @@ const readme = (
   updates,
   install,
   use,
-  credits
+  credits,
+  github,
+  email
 ) => `README
 
 ## ${projectTitle}
@@ -34,7 +36,7 @@ const readme = (
 ## Credits:
     ${credits}
 ##Questions?
-    Please feel free to contact me at:  https://github.com/${gitHub}/ or ${email}
+    Please feel free to contact me at:  https://github.com/${github}/ or ${email}
 
 ---`;
 
@@ -96,7 +98,7 @@ inquirer
       message: "What sources/ collaborators need to be accredited?",
     },
     {
-      // Questions section Github:
+      // Questions section github:
       name: "github",
       type: "input",
       message: "Please enter your github username:",
@@ -111,12 +113,18 @@ inquirer
   //then uses the input to create the generated README from listed string literals and keys from user input
   .then((answers) => {
     const generatedReadme = readme(
-      answers.name,
-      answers.location,
-      answers.bio,
-      answers.linkedIn,
-      answers.gitHub
+      answers.projectTitle,
+      answers.description,
+      answers.functionality,
+      answers.techUsed,
+      answers.challenges,
+      answers.updates,
+      answers.install,
+      answers.use,
+      answers.credits,
+      answers.github,
+      answers.email
     );
     //writes file to file system, if there is an error there will be an error message in the console log
-    fs.writeFile("readme.md", generatedReadme, (err) => console.log(err));
+    fs.writeFile("newREADME.md", generatedReadme, (err) => console.log(err));
   });
